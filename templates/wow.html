@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ <p>Today is {{date}}</p>
+<h3>{{ the_title }}</h3>
+
+<img alt="World of Warcraft" src="{{ url_for('static', filename='images/wow.jpg') }}">
+<p class="credit">Blizzard Entertainment
+    <a href="https://worldofwarcraft.com/en-us/" target="_blank">via https://worldofwarcraft.com</a></p>
+
+<ul>
+  <li><a href="{{ url_for('warzone') }}">Call of Duty: Warzone</a></li>
+  <li><a href="{{ url_for('main') }}">Main Page</a></li>
+    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+</ul>
+
+<p> World of Warcraft (WoW) is a massively multiplayer online role-playing game
+    (MMORPG) released in 2004 by Blizzard Entertainment. Set in the Warcraft
+    fantasy universe, World of Warcraft takes place within the world of Azeroth,
+    approximately four years after the events of the previous game in the series,
+    Warcraft III: The Frozen Throne. The game was announced in 2001, and was released
+    for the 10th anniversary of the Warcraft franchise on November 23, 2004. Since launch,
+    World of Warcraft has had eight major expansion packs:  </p>
+
+<style>
+table, th, td {
+  border: 2px solid red;
+}
+</style>
+
+<table style="width:100%">
+  <tr>
+    <th>Expansion</th>
+    <th>Release Date</th>
+    <th>Price</th>
+      <th>Cover</th>
+  </tr>
+  <tr>
+    <td>The Burning Crusade</td>
+    <td>2007</td>
+    <td>$9.99</td>
+      <td><img alt="World of Warcraft: The Burning Crusade" src="{{ url_for('static', filename='images/wow_bc.jpg') }}">
+      <img src="wow_bc.jpg"></td>
+  </tr>
+  <tr>
+    <td>Wrath of the Lich King</td>
+    <td>2008</td>
+    <td>$9.99</td>
+      <td><img alt="World of Warcraft: Wrath of the Lich King" src="{{ url_for('static', filename='images/wow_wotlk.jpg') }}">
+      <img src="wow_wotlk.jpg"></td>
+  </tr>
+    <tr>
+    <td>Cataclysm</td>
+    <td>2010</td>
+    <td>$9.99</td>
+        <td><img alt="World of Warcraft: Cataclysm" src="{{ url_for('static', filename='images/wow_cata.jpg') }}">
+        <img src="wow_cata.jpg"></td>
+  </tr>
+  <tr>
+    <td>Mists of Pandaria</td>
+    <td>2012</td>
+    <td>$9.99</td>
+      <td><img alt="World of Warcraft: Mists of Pandaria" src="{{ url_for('static', filename='images/wow_mop.jpg') }}">
+      <img src="wow_mop.jpg"></td>
+  </tr>
+    <tr>
+    <td>Warlords of Draenor</td>
+    <td>2014</td>
+    <td>$19.99</td>
+        <td><img alt="World of Warcraft: Warlords of Draenor" src="{{ url_for('static', filename='images/wow_wod.jpg') }}">
+        <img src="wow_wod.jpg"></td>
+  </tr>
+    <tr>
+    <td>Legion</td>
+    <td>2016</td>
+    <td>$19.99</td>
+        <td><img alt="World of Warcraft: Legion" src="{{ url_for('static', filename='images/wow_legion.jpg') }}">
+        <img src="wow_legion.jpg"></td>
+  </tr>
+    <tr>
+    <td>Battle for Azeroth</td>
+    <td>2018</td>
+    <td>$19.99</td>
+        <td><img alt="World of Warcraft: Battle for Azeroth" src="{{ url_for('static', filename='images/wow_bfa.jpg') }}">
+        <img src="wow_bfa.jpg"></td>
+  </tr>
+    <tr>
+    <td>Shadowlands</td>
+    <td>2020</td>
+    <td>$29.99</td>
+        <td><img alt="World of Warcraft: Shadowlands" src="{{ url_for('static', filename='images/wow_shadowlands.jpg') }}">
+        <img src="wow_shadowlands.jpg"></td>
+  </tr>
+</table>
+
+<p> Similar to other MMORPGs, the game allows players to create a character avatar and explore
+    an open game world in third- or first-person view, exploring the landscape, fighting various
+    monsters, completing quests, and interacting with non-player characters (NPCs) or other players.
+    The game encourages players to work together to complete quests, enter dungeons and engage in
+    player versus player (PvP) combat, however the game can also be played solo without interacting
+    with others. The game primarily focuses on character progression, in which players earn experience
+    points to level up their character to make them more powerful and buy and sell items using in-game
+    currency to acquire better equipment, among other game systems.</p>
+
+
+{% endblock %}

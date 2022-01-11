@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block title %}Main{% endblock %}
+
+{% block content %}
+
+<p>Today is {{date}}</p>
+
+{% for mesg in get_flashed_messages() %}
+<h3>{{ mesg }}</h3>
+{% endfor %}
+
+<h1>{{ the_title }}</h1>
+
+<img alt="Battle.net" src="{{ url_for('static', filename='images/bnet.jpg') }}">
+<p class="credit"> Blizzard Entertainment <a href="https://us.shop.battle.net/en-us"
+                                             target="_blank">via https://battle.net</a></p>
+
+
+<ul>
+
+    <li><a href="{{ url_for('wow') }}">World of Warcraft</a></li>
+    <li><a href="{{ url_for('warzone') }}">Call of Duty: Warzone</a></li>
+    <li><a href="{{ url_for('change_pass') }}">Change Password</a></li>
+    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+
+</ul>
+
+<p>Battle.net is an Internet-based online game, social networking service, digital distribution,
+    and digital rights management platform developed by Blizzard Entertainment.
+    The service was launched on December 31, 1996, followed a few days later with the release
+    of Blizzard's action-role-playing video game Diablo on January 3, 1997. Battle.net was
+    officially renamed to "Blizzard Battle.net" in August 2017.</p>
+
+<p>Battle.net was the first online gaming service incorporated directly into the games that
+    make use of it, in contrast to the external interfaces used by the other online services
+    at the time. This feature, along with ease of account creations and the absence of member
+    fees, caused Battle.net to become popular among gamers and became a major selling point
+    for Diablo and subsequent Blizzard games. Since the successful launch of Battle.net,
+    many companies have created online game services mimicking Blizzard's service package
+    and the user interface.</p>
+
+{% endblock %}

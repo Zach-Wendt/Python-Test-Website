@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ <p>Today is {{date}}</p>
+<h2>{{ the_title }}</h2>
+
+<img alt="Call of Duty: Warzone" src="{{ url_for('static', filename='images/warzone.jpg') }}">
+<p class="credit">Blizzard Entertainment
+    <a href="https://www.callofduty.com/warzone" target="_blank">https://callofduty.com</a></p>
+
+<ul>
+  <li><a href="{{ url_for('wow') }}">World of Warcraft</a></li>
+  <li><a href="{{ url_for('main') }}">Main Page</a></li>
+    <li><a href="{{ url_for('logout') }}">Logout</a></li>
+</ul>
+
+<p>Call of Duty: Warzone is a free-to-play battle royale video game released
+    on March 10, 2020, for PlayStation 4, Xbox One, and Microsoft Windows.
+    The game is a part of 2019's Call of Duty: Modern Warfare and is connected
+    to 2020's Call of Duty: Black Ops: Cold War (but does not require purchase
+    of either titles) and was introduced during Season 2 of Modern Warfare
+    content. Warzone is developed by Infinity Ward and Raven Software (the
+    latter later credited as the sole developer following the integration of
+    Cold War's content) and published by Activision. Warzone allows online
+    multiplayer combat among 150 players, although some limited-time game
+    modes support 200 players. The game features both cross-platform play and
+    cross-platform progression between three games. </p>
+
+<p>The game features three main modes: Plunder, Resurgence, and Battle
+    Royale. Warzone introduces a new in-game currency system which can be
+    used at "Buy Stations" in and around the map. "Loadout" drops are an
+    example of where Cash can be traded for limited access to players' custom
+    classes (which were shared with Modern Warfare's standard modes prior to
+    Season 6, v1.29, but now are unique to Warzone). Players may also use Cash
+    to purchase items such as "killstreaks" and gas masks. Cash can be found by
+    looting buildings and killing players that have cash on them. At launch, Warzone
+    only offered Trios, a squad capacity of three players. However, in free post
+    content updates, Solos, Duos and Quads have all been added to the game.</p>
+
+{% endblock %}

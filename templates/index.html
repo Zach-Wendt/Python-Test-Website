@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<p>Today is {{date}}</p>
+    <h1>You must login or register to use Battle.net</h1>
+
+    <ul>
+    <li><a href="/login">Login</a></li>
+    <li><a href="/register">Register</a></li>
+        <li><a href="/change_pass">Change Password</a></li>
+  <li><a href="{{ url_for('main') }}">Main Page</a></li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block title %}Registration Form{% endblock %}
+
+{% block content %}
+    <h2>Please enter a username and password</h2>
+    <form method="POST">
+    {{ form.csrf_token }}
+    <p>
+        {{ form.username.label }}{{ form.username(size=20) }}
+    </p>
+    <p>
+        {{ form.password.label }}{{ form.password(size=20) }}
+    </p>
+    <input type="submit" value="Register">
+    </form>
+<ul><li><a href="{{ url_for('index') }}">Back to Default Page</a></li></ul>
+{% endblock %}
